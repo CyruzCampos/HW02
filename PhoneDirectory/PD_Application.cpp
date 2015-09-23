@@ -2,6 +2,7 @@
 
 #include "Array_Based_PD.h"
 #include <iostream>
+#include <string>
 #include <istream>
 #include <ostream>
 #include <limits>
@@ -86,11 +87,23 @@ void do_lookup_entry(Phone_Directory& the_directory)
 }
 
 void do_remove_entry(Phone_Directory& the_directory) // Exercise 1.8: please complete the function do_remove_entry - Ed/Kent
+								/*Completed by Tyler Delgado*/
 {
 	string name;
 	cout << "Enter name: ";
 	getline(cin, name);
-	// Complete the rest of this function 
+
+	while (getline(kill, line))
+	{
+		if (line != deleteline)
+		{
+			temp << line << endl;
+		}
+		else
+		{
+			getline(kill, line); // Error handling is pretty irrelevant here.
+		}
+	}
 	
 }
 
