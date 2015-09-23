@@ -54,12 +54,31 @@ public:
 
 private:
 	class Directory_Entry /* Exercise 1.6: Please complete the definition of the Directory_Entry class here. - Ed/Kent */
+						  /*Completed by Chris Blair-Garcia*/
 	{
 	public:
-	
-	private:
+		Directory_Entry() {} // Default no-argument constructor
+		Directory_Entry(std::string the_name, std::string the_number) {
+			cin >> the_name;
+			cin >> the_number;
+			
+		}
+		std::string get_name() const {
+			return the_name;
+		}
+		std::string get_number() const {
+			return the_number;
+		}
+		void set_number(const std::string& new_number) {
+			cin >> new_number;
+			the_number = new_number;
+			// complete
 
-	};
+
+	private:
+		string the_name;
+		string the_number;
+		};
 
 	// Private Functions
 	/** Searches the array of directory entries for the name.

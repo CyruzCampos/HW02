@@ -3,6 +3,8 @@
 	@author Koffman and Wolfgang
 */
 
+//Prof MBELL added this line to figure out what was going with the pesky github error, 9/23/2015
+
 #include "Array_Based_PD.h"
 #include <string>
 #include <fstream>
