@@ -119,17 +119,24 @@ void Phone_Directory::save()
 string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please complete the remove_entry() method - Ed/Kent
 						/* Complete by Cyruz Campos*/
 {
-	string name;
-	this-> name = name;
-	cout << "Enter name: ";
-	cin >> name;
-	getline(cin, name);
+	int i, n;
+	int * names;
+	cout << "How many new Directory Entries?\n";
+	cin >> i;
+	names = new int[2][i];
 
-	for (int i = index; i < size - 1; i++)
+	for (n = 0; n<i; n++)
 	{
-		the_directory[i] = the_directory[i + 1];
-		delete[i] the_directory;
+		cout << "Enter names: ";
+		cin >> names[0][n];
+
+		cout << "Enter number: ";
+		cin >> names[1][n];
 	}
+	cout << "You have entered: ";
+	for (n = 0; n<i; n++)
+		cout << names[0][n] << ", " << names[1][n];
+	delete[] names;
 
 	return "";
 }
