@@ -7,6 +7,7 @@
 
 #include "Array_Based_PD.h"
 #include <string>
+#include <iostream>
 #include <fstream>
 #include <istream>
 #include <ostream>
@@ -118,7 +119,12 @@ void Phone_Directory::save()
 string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please complete the remove_entry() method - Ed/Kent
 						/* Complete by Cyruz Campos*/
 {
-	
+	string name;
+	this-> name = name;
+	cout << "Enter name: ";
+	cin >> name;
+	getline(cin, name);
+
 	for (int i = index; i < size - 1; i++)
 	{
 		the_directory[i] = the_directory[i + 1];
