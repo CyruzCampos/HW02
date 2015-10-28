@@ -20,6 +20,7 @@ Phone_Directory::Phone_Directory() :
 size(0), capacity(100), the_directory(new Directory_Entry[100]),
 source_name("") {}
 
+
 /** Destroy the Phone_Directory
  */
 Phone_Directory::~Phone_Directory()
@@ -119,26 +120,16 @@ void Phone_Directory::save()
 string Phone_Directory::remove_entry(const string& name) // Exercise 1.7: please complete the remove_entry() method - Ed/Kent
 						/* Complete by Cyruz Campos*/
 {
-	int i, n;
-	int * names;
-	cout << "How many new Directory Entries?\n";
-	cin >> i;
-	names = new int[2][i];
+	for (int i = index; i < size - 1; i++) {
+		the_directory[i] = the_directory[i + 1];
 
-	for (n = 0; n<i; n++)
-	{
-		cout << "Enter names: ";
-		cin >> names[0][n];
+		if (index == the_directory[i])
+		{
+			delete[i] the_directory;
+		}
 
-		cout << "Enter number: ";
-		cin >> names[1][n];
 	}
-	cout << "You have entered: ";
-	for (n = 0; n<i; n++)
-		cout << names[0][n] << ", " << names[1][n];
-	delete[] names;
 
-	return "";
 }
 
 // Private method implementation
